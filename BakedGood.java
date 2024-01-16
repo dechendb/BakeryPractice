@@ -18,7 +18,6 @@ public class BakedGood
      */
     public BakedGood(String name, String recipe, double price, int quantity)
     {
-        // initialise instance variables
         this.name = name;
         this.recipe = recipe;
         this.price = price;
