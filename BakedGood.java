@@ -34,6 +34,21 @@ public class BakedGood
     public void IncreaseQuant (int count) {
         this.quantity += count;
     }
+
+    /**
+     * Instance method to allow for buying baked goods
+     * 
+     *  param: the count (number) of items being bought
+     *  return: total cost
+     *  
+     */
+    public double Purchase(int count) {
+        if (count > this.quantity){
+            throw new IllegalArgumentException("You're asking for more than what we have!");
+        }
+        this.quantity -= count;
+        return this.price *count;
+    }
     
     /**
      * toString
@@ -42,7 +57,7 @@ public class BakedGood
      * return: String representation of our work
      */
     public String toString(){
-        return "Baked Good" + this.name + " (" +this.quantity +","+ " @" + "$"+this.price+ ")";
+        return "Baked Good:  " + this.name + " (" +this.quantity +","+ " @" + "$"+this.price+ ")";
     }
     
     /**
@@ -61,7 +76,9 @@ public class BakedGood
         //bake 3 more crossiants with leftover dough
         crossiant.IncreaseQuant(3);
         System.out.println(crossiant);
-        
+
+        System.out.println(crossiant.Purchase(3));
+        System.out.println(crossiant);        
         
     }
 }
