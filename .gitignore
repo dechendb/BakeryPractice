@@ -1,0 +1,4 @@
+# ignores anything that ends with .class or .ctxt, as well as the package.bluej
+*.class
+*.ctxt
+package.bluej
