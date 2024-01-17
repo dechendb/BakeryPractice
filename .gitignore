@@ -2,3 +2,6 @@
 *.class
 *.ctxt
 package.bluej
+
+# helped for macs: ignore the ds store file
+.DS_Store
